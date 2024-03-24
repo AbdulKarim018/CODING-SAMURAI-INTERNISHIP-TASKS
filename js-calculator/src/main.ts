@@ -68,7 +68,7 @@ const operators = [
   { key: plus, operator: "+" },
   { key: minus, operator: "-" },
   { key: multiply, operator: "×" },
-  { key: divide, operator: "/" },
+  { key: divide, operator: "÷" },
   { key: pow, operator: "^" },
 ];
 
