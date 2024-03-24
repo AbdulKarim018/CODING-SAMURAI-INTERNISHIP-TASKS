@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/calc.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator By Abdul Karim</title>
+  </head>
+  <body class="bg-black">
+    <div
+      id="app"
+      class="min-h-dvh grid place-items-end lg:flex lg:flex-col gap-16 lg:justify-center lg:items-center"
+    >
+      <h1 class="text-white text-center w-full text-3xl">
+        Calculator
+        <a
+          href="https://github.com/abdulkarim018"
+          target="_blank"
+          class="text-base underline text-teal-400"
+          >By Abdul Karim</a
+        >
+      </h1>
+      <div
+        id="calculator"
+        class="lg:w-80 w-full h-auto scale-y-110 flex flex-col rounded-2xl shadow-2xl"
+      >
+        <div id="screen">
+          <input
+            id="display"
+            class="bg-black outline-none w-full rounded-2xl text-white text-3xl text-right p-4"
+            readonly
+            placeholder="Start Calculating..."
+          />
+        </div>
+        <div id="keypad">
+          <div
+            class="h-[50vh] lg:h-[20vh] grid grid-cols-4 place-items-center xl:grid-cols-4 gap-2.5 p-4"
+          >
+            <button class="keyButton" id="clear">C</button>
+            <button class="keyButton" id="pow">
+              <i data-lucide="chevron-up" class="keyButton"></i>
+            </button>
+            <button id="delete" class="keyButton">
+              <i data-lucide="delete" class="keyButton"></i>
+            </button>
+            <button class="keyButton" id="divide">
+              <i data-lucide="divide" class="keyIcon"></i>
+            </button>
+
+            <button class="keyButton" id="key_7">7</button>
+            <button class="keyButton" id="key_8">8</button>
+            <button class="keyButton" id="key_9">9</button>
+            <button class="keyButton" id="multiply">
+              <i data-lucide="x" class="keyIcon"></i>
+            </button>
+            <button class="keyButton" id="key_4">4</button>
+            <button class="keyButton" id="key_5">5</button>
+            <button class="keyButton" id="key_6">6</button>
+            <button class="keyButton" id="minus">
+              <i data-lucide="minus" class="keyIcon"></i>
+            </button>
+            <button class="keyButton" id="key_1">1</button>
+            <button class="keyButton" id="key_2">2</button>
+            <button class="keyButton" id="key_3">3</button>
+            <button class="keyButton" id="plus">
+              <i data-lucide="plus" class="keyIcon"></i>
+            </button>
+            <button class="keyButton" id="key_00">00</button>
+            <button class="keyButton" id="key_0">0</button>
+            <button class="keyButton" id="key_dot">.</button>
+            <button class="keyButton" id="equal">
+              <i data-lucide="equal" class="keyIcon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
