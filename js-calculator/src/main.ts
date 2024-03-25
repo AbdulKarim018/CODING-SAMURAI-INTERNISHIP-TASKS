@@ -77,7 +77,9 @@ let operatorSymbols = operators.map((op) => op.operator);
 // keys 0-9, 00, dot
 keys.forEach((key) => {
   key.addEventListener("click", () => {
-    display.value! += key.textContent;
+    if (display.value === "Syntax Error")
+      return (display.value = key.textContent!);
+    display.value += key.textContent;
   });
 });
 
