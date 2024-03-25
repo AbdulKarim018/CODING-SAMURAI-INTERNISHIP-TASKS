@@ -72,14 +72,23 @@ const operators = [
   { key: pow, operator: "^" },
 ];
 
+let operatorSymbols = operators.filter((op) => op.operator);
+
+// keys 0-9, 00, dot
 keys.forEach((key) => {
   key.addEventListener("click", () => {
     display.value! += key.textContent;
   });
 });
 
+// operators +, -, *, /, ^
 operators.forEach((operator) => {
   operator.key.addEventListener("click", () => {
+    if (operatorSymbols.includes(operator) && display.value === "") {
+      display.value = "0" + operator.operator;
+      return;
+    }
+    return;
     if (display.value === "") return;
     display.value += operator.operator;
   });
