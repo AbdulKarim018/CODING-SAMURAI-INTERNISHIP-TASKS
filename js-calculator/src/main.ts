@@ -72,7 +72,7 @@ const operators = [
   { key: pow, operator: "^" },
 ];
 
-let operatorSymbols = operators.filter((op) => op.operator);
+let operatorSymbols = operators.map((op) => op.operator);
 
 // keys 0-9, 00, dot
 keys.forEach((key) => {
@@ -84,11 +84,12 @@ keys.forEach((key) => {
 // operators +, -, *, /, ^
 operators.forEach((operator) => {
   operator.key.addEventListener("click", () => {
-    if (operatorSymbols.includes(operator) && display.value === "") {
-      display.value = "0" + operator.operator;
+    if (display.value === "") return (display.value = "0" + operator.operator);
+    if (operatorSymbols.includes(display.value[display.value.length - 1])) {
+      display.value = display.value.slice(0, -1) + operator.operator;
       return;
     }
-    return;
+
     if (display.value === "") return;
     display.value += operator.operator;
   });
